@@ -2,60 +2,50 @@
 import React from 'react';
 import './App.css';
 
-class Home extends React.Component{
-  render(){
-  return <div>Home page</div>; 
-  }
-}
+const Home = () => <div>Home page</div>; 
 
-class News extends React.Component{
-  render(){
-  return <div>News page</div>; 
-  }
-}
+const News = () => <div>News page</div>;
+  
+const CallBack = () => <div>CallBack page</div>;
 
-class CallBack extends React.Component{
-  render(){
-  return <div>CallBack page</div>; 
-  }
-}
-
-class Contacts extends React.Component{
-  render(){
-  return <div>Contacts page</div>; 
-  }
-}
-
+const Contacts = () => <div>Contacts page</div>;
 
 const menu = [
   {
     id: "01",
     title: "Home",
     href: "#",
-    page: <Home/>
+    page: "home"
   },
   {
     id: "02",
     title: "News",
     href: "#",
-    page: <News/>
+    page: "news"
   },
   {
     id: "03",
     title: "CallBack",
     href: "#",
-    page: <CallBack/>
+    page: "callBack"
   },
   {
     id: "04",
     title: "Contacts",
     href: "#",
-    page: <Contacts/>
+    page: "contacts"
   }
-]
+];
+
+const PAGES = {
+  home: <Home />,
+  news: <News />,
+  callBack: <CallBack />,
+  contacts: <Contacts />
+};
 
 class App extends React.Component {
-  state = { currentPage: <Home/> }
+  state = { currentPage: "home" }
 
   onClick = (id) => {
     this.setState({ currentPage :  menu.find(menu => menu.id === id).page });
@@ -76,7 +66,7 @@ class App extends React.Component {
         ))}
       </nav>   
       <div>
-          {this.state.currentPage}
+          {PAGES[this.state.currentPage]}
       </div>  
     </div>
   }
