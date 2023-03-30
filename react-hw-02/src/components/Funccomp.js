@@ -14,9 +14,8 @@ const UserCard = ({ name, surname, age }) => {
 
 const UserCardText = ( { myInfoString } ) => {
     return (
-        <>
-            <div>{myInfoString} </div>
-        </>
+        <div>{myInfoString} </div>
+        
     )
 }
 
