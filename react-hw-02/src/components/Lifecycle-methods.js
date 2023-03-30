@@ -10,7 +10,6 @@ export default class LifeCycleTest extends React.Component {
 
     componentDidMount() {
         console.log('Component is mounted');
-        this.setState({ title: document.title });
         document.title = this.state.title;
     }
 
@@ -21,12 +20,12 @@ export default class LifeCycleTest extends React.Component {
 
     render() {
         return (
-        <>
-            ***Task 3***
+        <div>
+            <div>***Task 3***</div>
             <div>
                 <button onClick={() => this.setState({ title: 'Next page' })}>Change</button>
             </div>
-        </>
+        </div>
         );
     }
 }

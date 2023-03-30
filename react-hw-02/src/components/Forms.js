@@ -32,8 +32,8 @@ export default class Form extends Component {
 
     render() {
         return (
-            <>
-                ***Task 2***
+            <div>
+                <div>***Task 2***</div>
                 <form onSubmit={this.submit}>
                     <div>
                         <input 
@@ -53,7 +53,7 @@ export default class Form extends Component {
                     </div>
                     <div><button type="submit">Submit</button></div>
                 </form>
-            </>
+            </div>
         )
     }
 }

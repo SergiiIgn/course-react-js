@@ -33,7 +33,7 @@ export default class User extends React.Component {
     render() {
         return (
             <div>
-                ***Task 1***
+                <div>***Task 1***</div>
                 <UserCard  { ...this.state } />
                 {/* ***This was the first option */}
                 <UserCard 
