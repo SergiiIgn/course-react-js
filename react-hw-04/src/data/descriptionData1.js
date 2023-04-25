@@ -1,4 +1,5 @@
-export const taskDescription1 = () => {
+const TaskDescr1 = () => {
+    return(
     <div>
         <p><b>Задача №1. Робота з Toggler HOC </b> - відповідає за функціоналом тоглера (переключення стану  true/false)</p>
         <p>1. Створити компонент <b>User</b> тa <b>Album</b>, <b>withToggler</b></p>
@@ -21,4 +22,6 @@ export const taskDescription1 = () => {
         <p>Постачає WrappedComponent пропсами:</p>
         <p><b>toggled</b>  (стан тоглера true/false) і <b>changeToggled</b> (функція для зміни стану тоглера)</p>
     </div>
+    )
 }
+export default TaskDescr1;

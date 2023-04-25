@@ -2,7 +2,6 @@ import ProductCard from "./ProductCard";
 import { withFetchingData } from "../../HOCs/withFetchingData"
 
 const ProductCardList = ({data: products, isLoading, error}) => {
-    console.log(products);
     return (
         <div>
             <h3>PRODUCTS</h3>
